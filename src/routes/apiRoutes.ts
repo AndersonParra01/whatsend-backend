@@ -4,6 +4,7 @@ import { processUploads } from "./../controllers/uploadController";
 import customerController from '../controllers/customerController'
 import deliveryController from '../controllers/deliveryController'
 import messageController from '../controllers/messageController'
+import branchController from '../controllers/branchController'
 // Configuración de multer
 const upload = multer({ dest: "uploads/" });
 
@@ -14,6 +15,7 @@ router.use("/upload-files", processUploads)
 router.use("/customers", customerController)
 router.use("/deliveries", deliveryController)
 router.use("/messages", messageController)
+router.use("/branches", branchController);
 
 
 export default router;

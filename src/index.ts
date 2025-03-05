@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Middleware para CORS
 app.use(cors({
-  origin: 'http://localhost:4200',
+  origin: ['http://localhost:4200', 'https://whatsend-frontend.onrender.com'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 }));
 

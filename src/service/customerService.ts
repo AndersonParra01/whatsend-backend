@@ -10,7 +10,7 @@ export class CustomerService {
 	}
 
 	async getAllCustomers(): Promise<Customer[]> {
-		return await this.customerRepository.find({ relations: ["deliveries"] });
+		return await this.customerRepository.find({ relations: ["deliveries", "branch"] });
 	}
 
 	async getCustomerById(id: number): Promise<Customer | null> {

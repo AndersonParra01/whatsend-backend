@@ -19,11 +19,11 @@ export class Message {
     intervale: number;
 
     @CreateDateColumn({ type: "timestamp", nullable: true })
-    created_at: Date;
+    createdAt: Date;
 
 
     @Column({ type: "timestamp", nullable: true })
-    updated_at: Date;
+    updatedAt: Date;
 
     // Relación 1:N con Delivery
     // Un mensaje puede tener muchas entregas

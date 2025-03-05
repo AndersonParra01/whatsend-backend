@@ -20,6 +20,7 @@ router.get("/findId/:id", async (req: Request, res: any) => {
 
 
 router.post("/create", async (req: Request, res: Response) => {
+  console.log('BODY QUE LLEGO DESDE FRONT', req.body);
   const newCustomer = await customerService.createCustomer(req.body);
   res.status(201).json(newCustomer);
 });

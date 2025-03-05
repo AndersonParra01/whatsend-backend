@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, Unique } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, ManyToOne, Unique, CreateDateColumn } from "typeorm";
 import { Message } from "./message.entity";
 import { Customer } from "./customer.entity";
 
@@ -16,6 +16,6 @@ export class Delivery {
     /*     @JoinColumn({ name: "client_id" }) */
     client: Customer;
 
-    @Column({ type: "timestamp" })
+    @CreateDateColumn({ type: "timestamp", nullable: true })
     sent_at: Date;
 }
